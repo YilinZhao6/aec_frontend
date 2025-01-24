@@ -1,0 +1,90 @@
+  const mockBooks = [
+    {
+      id: 1,
+      title: "Quantum Mechanics: A Modern Introduction",
+      category: "Quantum Physics",
+      createdAt: "2024-03-15",
+      readingTime: 8,
+      wordCount: 1200,
+      characterCount: 6800,
+      coverColor: "bg-indigo-500",
+      summary: "An introduction to the fundamental principles of quantum mechanics, including wave-particle duality, superposition, and quantum entanglement."
+    },
+    {
+      id: 2,
+      title: "String Theory Fundamentals",
+      category: "Theoretical Physics",
+      createdAt: "2024-03-14",
+      readingTime: 6,
+      wordCount: 950,
+      characterCount: 5200,
+      coverColor: "bg-emerald-500",
+      summary: "Exploring the basics of string theory and its implications for understanding the universe at its most fundamental level."
+    },
+    {
+      id: 3,
+      title: "Introduction to Dark Matter",
+      category: "Astrophysics",
+      createdAt: "2024-03-13",
+      readingTime: 7,
+      wordCount: 1050,
+      characterCount: 5900,
+      coverColor: "bg-purple-500",
+      summary: "Understanding the mysterious dark matter, its effects on galaxy formation, and current detection methods."
+    },
+    {
+      id: 4,
+      title: "The Physics of Black Holes",
+      category: "Astrophysics",
+      createdAt: "2024-03-12",
+      readingTime: 9,
+      wordCount: 1350,
+      characterCount: 7400,
+      coverColor: "bg-blue-500",
+      summary: "Diving into the physics of black holes, from their formation to their effects on spacetime and quantum mechanics."
+    },
+    {
+      id: 5,
+      title: "Particle Physics Explained",
+      category: "Particle Physics",
+      createdAt: "2024-03-11",
+      readingTime: 5,
+      wordCount: 800,
+      characterCount: 4500,
+      coverColor: "bg-rose-500",
+      summary: "An overview of fundamental particles, their interactions, and the Standard Model of particle physics."
+    },
+    {
+      id: 6,
+      title: "Advanced Relativity Concepts",
+      category: "Relativity",
+      createdAt: "2024-03-10",
+      readingTime: 8,
+      wordCount: 1150,
+      characterCount: 6300,
+      coverColor: "bg-amber-500",
+      summary: "Exploring advanced concepts in special and general relativity, including spacetime curvature and gravitational waves."
+    },
+    {
+      id: 7,
+      title: "Plasma Physics and Applications",
+      category: "Plasma Physics",
+      createdAt: "2024-03-09",
+      readingTime: 6,
+      wordCount: 900,
+      characterCount: 5100,
+      coverColor: "bg-teal-500",
+      summary: "Understanding plasma behavior and its applications in fusion energy, space physics, and industrial processes."
+    },
+    {
+      id: 8,
+      title: "Cosmology: From Big Bang to Now",
+      category: "Cosmology",
+      createdAt: "2024-03-08",
+      readingTime: 7,
+      wordCount: 1100,
+      characterCount: 6100,
+      coverColor: "bg-cyan-500",
+      summary: "A journey through the history of our universe, from the Big Bang to the present day, exploring major cosmological concepts."
+    }
+  ];

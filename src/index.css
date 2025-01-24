@@ -1,0 +1,242 @@
+/*index.css--YOU MUST KEEP THIS NAME AND THIS COMMENT AS IT IS*/
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&display=swap');
+
+
+.related-topics {
+  border: 1px solid #d0d4db; /* Subtle gray border */
+  border-radius: 8px; /* Rounded corners for a refined look */
+  background-color: #f7f9fc; /* Light blue-gray background */
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem; /* Smaller top padding */
+  margin-top: 2rem;
+  font-family: var(--primary-font);
+  font-size: 1.1em;
+  line-height: 0.6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.related-topics h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5em;
+
+}
+
+.related-topics p {
+  margin-bottom: 0.5em;
+
+}
+
+.related-topics ul {
+  margin-top: 0.5em;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+
+}
+
+
+
+
+
+/* index.css */
+.example-box {
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background color */
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  --bg-color: #f5f5dc; /* 米色 (beige) */
+  --primary-font: 'Helvetica Neue', serif;
+  --search-font: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--primary-font);
+}
+
+/* Apply Helvetica Neue to the search box text */
+input[type="text"] {
+  font-family: var(--search-font);
+}
+
+/* Apply Helvetica Neue to the "previous search" text */
+.previous-search {
+  font-family: var(--search-font);
+}
+
+.math {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+}
+
+.prose h1 {
+  font-family: var(--primary-font);
+  font-size: 2.2em;
+  line-height: 1.0;
+  margin-bottom: 0em;
+}
+
+.prose h2 {
+  font-family: var(--primary-font);
+  font-size: 1.8em;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+}
+
+.prose h3 {
+  font-family: var(--primary-font);
+  font-size: 1.5em;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+}
+
+.prose {
+  font-size: 1.4em !important;
+  line-height: 1.4 !important;
+}
+
+.prose *,
+.prose p, 
+.prose ol, 
+.prose ul, 
+.prose li,
+.prose li strong,
+.prose li em,
+.prose li p,
+.prose li span,
+.key-points {
+  font-size: inherit;
+  font-family: var(--primary-font);
+}
+
+/* Add specific line-height control */
+.prose p,
+.prose ol,
+.prose ul,
+.prose li,
+.key-points {
+  line-height: 1.4;  /* You can adjust this value as needed */
+}
+
+/* Maintain your heading sizes separately */
+.prose h1 {
+  font-size: 2.2em;
+  line-height: 1.0;
+}
+
+.prose h2 {
+  font-size: 1.8em;
+  line-height: 1.4;
+}
+
+.prose h3 {
+  font-size: 1.5em;
+  line-height: 1.4;
+}
+
+figure {
+  float: right;
+  width: 30%;
+  margin: 10px;
+  padding: 10px;
+  border: 10px solid #ccc;
+  background-color: #f8f9fa;
+}
+
+figcaption {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 0.9em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  padding-left: 10px;
+}
+
+/* Make sure the "Explain!" button retains the main font */
+button.explain-btn {
+  font-family: var(--primary-font);
+}
+
+/* Custom styles for Follow Up Box overlay */
+.custom-context-menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-context-menu div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Loading animation for image loading */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+@import 'highlight.js/styles/github.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 30s linear infinite;
+}
+
+.animate-slide-right {
+  animation: slide-right 30s linear infinite;
+}
