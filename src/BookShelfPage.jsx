@@ -22,7 +22,7 @@ export default function BookshelfPage() {
       }
 
       try {
-        const response = await fetch('http://localhost:5000/get_generated_explanations', {
+        const response = await fetch('https://backend-ai-cloud-explains.onrender.com/get_generated_explanations', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ export default function BookshelfPage() {
   const handleBookClick = async (book) => {
     console.log('Fetching Markdown content for:', book.title);
     try {
-      const response = await fetch(`http://localhost:5000/article?user_id=${book.userId}&conversation_id=${book.conversationId}`);
+      const response = await fetch(`https://backend-ai-cloud-explains.onrender.com/article?user_id=${book.userId}&conversation_id=${book.conversationId}`);
       console.log('Fetch response status:', response.status);
 
       if (response.ok) {
