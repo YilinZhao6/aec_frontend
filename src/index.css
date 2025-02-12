@@ -1,0 +1,270 @@
+/*index.css--YOU MUST KEEP THIS NAME AND THIS COMMENT AS IT IS*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+/* Add responsive font sizes */
+@layer base {
+  html {
+    font-size: 14px;
+  }
+  @media (min-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Add the sweep animation */
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-sweep {
+  animation: sweep 2s ease-in-out infinite;
+}
+
+.related-topics {
+  border: 1px solid #d0d4db;
+  border-radius: 8px;
+  background-color: #f7f9fc;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  margin-top: 2rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.1em;
+  line-height: 0.6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.related-topics h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.related-topics p {
+  margin-bottom: 0.5em;
+}
+
+.related-topics ul {
+  margin-top: 0.5em;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.example-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  --bg-color: #ffffff;
+  --primary-font: "Source Sans 3", sans-serif;
+  --search-font: "Source Sans 3", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--primary-font);
+}
+
+input[type="text"] {
+  font-family: var(--search-font);
+}
+
+.previous-search {
+  font-family: var(--search-font);
+}
+
+.math {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+}
+
+/* Add responsive styles for markdown content */
+.markdown-content {
+  font-size: 0.9em;
+}
+@media (min-width: 640px) {
+  .markdown-content {
+    font-size: 1.1em;
+  }
+}
+
+.prose h1 {
+  font-family: var(--primary-font);
+  font-size: 1.8em;
+  line-height: 1.0;
+  margin-bottom: 0em;
+}
+@media (min-width: 640px) {
+  .prose h1 {
+    font-size: 2.2em;
+  }
+}
+
+.prose h2 {
+  font-family: var(--primary-font);
+  font-size: 1.5em;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+}
+@media (min-width: 640px) {
+  .prose h2 {
+    font-size: 1.8em;
+  }
+}
+
+.prose h3 {
+  font-family: var(--primary-font);
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+}
+@media (min-width: 640px) {
+  .prose h3 {
+    font-size: 1.5em;
+  }
+}
+
+.prose {
+  font-size: 1.4em !important;
+  line-height: 1.4 !important;
+}
+
+.prose *,
+.prose p, 
+.prose ol, 
+.prose ul, 
+.prose li,
+.prose li strong,
+.prose li em,
+.prose li p,
+.prose li span,
+.key-points {
+  font-size: inherit;
+  font-family: var(--primary-font);
+}
+
+.prose p,
+.prose ol,
+.prose ul,
+.prose li,
+.key-points {
+  line-height: 1.4;
+}
+
+figure {
+  float: none;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 10px;
+  border: 10px solid #ccc;
+  background-color: #f8f9fa;
+}
+@media (min-width: 640px) {
+  figure {
+    float: right;
+    width: 30%;
+    margin: 10px;
+  }
+}
+
+figcaption {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 0.9em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+input {
+  padding-left: 10px;
+}
+
+button.explain-btn {
+  font-family: var(--primary-font);
+}
+
+.custom-context-menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-context-menu div:hover {
+  background-color: #f0f0f0;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+@import 'highlight.js/styles/github.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 30s linear infinite;
+}
+
+.animate-slide-right {
+  animation: slide-right 30s linear infinite;
+}
