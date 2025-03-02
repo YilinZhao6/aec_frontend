@@ -26,7 +26,7 @@ const DiagramRenderer = ({ userId, conversationId }) => {
   useEffect(() => {
     const fetchDiagram = async () => {
       try {
-        const response = await fetch('https://backend-ai-cloud-explains.onrender.com/generate_diagram', {
+        const response = await fetch('http://localhost:5000/generate_diagram', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

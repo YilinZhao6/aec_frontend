@@ -25,7 +25,7 @@ const InitialSearchCollapseMenu = ({
       setBookError('');
 
       try {
-        const response = await fetch('https://backend-ai-cloud-explains.onrender.com/get_vectorized_book_info', {
+        const response = await fetch('http://localhost:5000/get_vectorized_book_info', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

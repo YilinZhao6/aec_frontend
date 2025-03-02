@@ -50,7 +50,7 @@ const MarkdownAskFollowUp = ({ isOpen, onToggle }) => {
     setCurrentStreamingMessage('');
 
     try {
-      const response = await fetch('https://backend-ai-cloud-explains.onrender.com/ask_question', {
+      const response = await fetch('http://localhost:5000/ask_question', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

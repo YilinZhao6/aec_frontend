@@ -21,7 +21,7 @@ export default function BookshelfPage() {
       }
 
       try {
-        const response = await fetch('https://backend-ai-cloud-explains.onrender.com/get_generated_explanations', {
+        const response = await fetch('http://localhost:5000/get_generated_explanations', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ user_id: userId })
