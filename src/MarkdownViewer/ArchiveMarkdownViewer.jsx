@@ -21,7 +21,7 @@ const ArchiveMarkdownViewer = ({ userId, conversationId }) => {
       }
 
       try {
-        const response = await fetch(`http://localhost:5000/article?user_id=${userId}&conversation_id=${conversationId}`);
+        const response = await fetch(`https://backend-ai-cloud-explains.onrender.com/article?user_id=${userId}&conversation_id=${conversationId}`);
         
         if (response.ok) {
           const content = await response.text();

@@ -33,7 +33,7 @@ const UserProfilePage = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/get_user_profile?user_id=${userId}`);
+      const response = await fetch(`https://backend-ai-cloud-explains.onrender.com/get_user_profile?user_id=${userId}`);
       if (response.ok) {
         const data = await response.json();
         const preferences = data.preferences;
@@ -72,7 +72,7 @@ const UserProfilePage = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/save_user_profile', {
+      const response = await fetch('https://backend-ai-cloud-explains.onrender.com/save_user_profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

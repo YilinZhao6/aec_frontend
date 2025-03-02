@@ -33,7 +33,7 @@ const MarkdownViewer = ({ markdownContent: initialContent, isComplete: initialIs
     if (!isArchiveView && !isComplete && userId && activeConversationId) {
       const fetchProgress = async () => {
         try {
-          const response = await fetch('http://localhost:5000/get_progress', {
+          const response = await fetch('https://backend-ai-cloud-explains.onrender.com/get_progress', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

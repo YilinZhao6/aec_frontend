@@ -27,7 +27,7 @@ const PapurosController = () => {
         requestBody.additional_comments = additionalComments;
       }
 
-      const response = await fetch('http://localhost:5000/save_query', {
+      const response = await fetch('https://backend-ai-cloud-explains.onrender.com/save_query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(requestBody),
@@ -52,7 +52,7 @@ const PapurosController = () => {
 
   const startEventSource = (query, bookIds, enableWebSearch, newConversationId) => {
     setLoadingMessages([]);
-    const eventSourceUrl = `http://localhost:5000/generate?query=${encodeURIComponent(query)}&user_id=${userId}&conversation_id=${newConversationId}&book_ids=${encodeURIComponent(bookIds)}&websearch=${enableWebSearch}`;
+    const eventSourceUrl = `https://backend-ai-cloud-explains.onrender.com/generate?query=${encodeURIComponent(query)}&user_id=${userId}&conversation_id=${newConversationId}&book_ids=${encodeURIComponent(bookIds)}&websearch=${enableWebSearch}`;
     console.log('Starting EventSource with URL:', eventSourceUrl);
     
     const eventSource = new EventSource(eventSourceUrl);

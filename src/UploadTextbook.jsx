@@ -10,7 +10,7 @@ const UploadTextbook = () => {
   const fetchVectorizedBooks = async () => {
     const userId = localStorage.getItem('user_id') || 'default_user';
     try {
-      const response = await fetch('http://localhost:5000/get_vectorized_book_info', {
+      const response = await fetch('https://backend-ai-cloud-explains.onrender.com/get_vectorized_book_info', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ const UploadTextbook = () => {
       formData.append('user_id', userId);
 
       try {
-        const uploadResponse = await fetch('http://localhost:5000/upload_reference_book', {
+        const uploadResponse = await fetch('https://backend-ai-cloud-explains.onrender.com/upload_reference_book', {
           method: 'POST',
           body: formData,
         });
@@ -79,7 +79,7 @@ const UploadTextbook = () => {
             )
           );
 
-          const vectorResponse = await fetch('http://localhost:5000/generate_vector_embeddings', {
+          const vectorResponse = await fetch('https://backend-ai-cloud-explains.onrender.com/generate_vector_embeddings', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ user_id: userId }),

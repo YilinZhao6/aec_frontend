@@ -32,7 +32,7 @@ const LoginPage = ({ onSignupClick, onLoginSuccess }) => {
   const checkUserProfile = async () => {
     const userId = localStorage.getItem('user_id');
     try {
-      const response = await fetch(`http://localhost:5000/get_user_profile?user_id=${userId}`);
+      const response = await fetch(`https://backend-ai-cloud-explains.onrender.com/get_user_profile?user_id=${userId}`);
       
       const data = await response.json();
 
@@ -58,7 +58,7 @@ const LoginPage = ({ onSignupClick, onLoginSuccess }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch('https://backend-ai-cloud-explains.onrender.com/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

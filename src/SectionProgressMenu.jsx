@@ -30,7 +30,7 @@ const SectionProgressMenu = ({ userId, conversationId, isArchiveView }) => {
       }
 
       try {
-        const response = await fetch('http://localhost:5000/get_section_progress', {
+        const response = await fetch('https://backend-ai-cloud-explains.onrender.com/get_section_progress', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
