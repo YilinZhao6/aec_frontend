@@ -1,0 +1,50 @@
+/* Base text styles */
+.followup-markdown {
+  font-size: 16.8px;
+  line-height: 1.4;
+  letter-spacing: 0.15px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Make all headings same size as text but bold */
+.followup-markdown h1,
+.followup-markdown h2,
+.followup-markdown h3,
+.followup-markdown h4,
+.followup-markdown h5,
+.followup-markdown h6 {
+  font-size: 16.8px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0.5em 0 0.3em 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Adjust paragraph spacing */
+.followup-markdown p {
+  margin: 0 0 0.4em 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Last paragraph in a message shouldn't have bottom margin */
+.followup-markdown p:last-child {
+  margin-bottom: 0;
+}
+
+/* List spacing */
+.followup-markdown ul,
+.followup-markdown ol {
+  margin: 0.4em 0;
+  padding-left: 1.5em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.followup-markdown li {
+  margin: 0 0 0.2em 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Math expressions */
+.followup-markdown .katex {
+  font-size: 1em !important;
+}

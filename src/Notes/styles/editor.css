@@ -1,0 +1,185 @@
+/* Base editor styles */
+.ProseMirror {
+  padding: 2rem 3rem;
+  min-height: calc(100vh - 10rem);
+  outline: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: white;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ProseMirror p {
+  margin: 1em 0;
+}
+
+.ProseMirror > *:first-child {
+  margin-top: 0;
+}
+
+/* Headings */
+.ProseMirror h1 {
+  font-size: 2em;
+  margin: 1em 0 0.5em;
+  font-weight: 600;
+}
+
+.ProseMirror h2 {
+  font-size: 1.5em;
+  margin: 1em 0 0.5em;
+  font-weight: 600;
+}
+
+.ProseMirror h3 {
+  font-size: 1.25em;
+  margin: 1em 0 0.5em;
+  font-weight: 600;
+}
+
+/* Lists */
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+.ProseMirror li {
+  margin: 0.5em 0;
+}
+
+.ProseMirror ul li {
+  list-style-type: disc;
+}
+
+.ProseMirror ol li {
+  list-style-type: decimal;
+}
+
+/* Concept mark styling */
+.concept-mark {
+  background: none;
+  border-bottom: 2px solid #3B82F6;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.concept-mark:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Imported content styling */
+.imported-content {
+  display: block;
+  background-color: #F0F0F0;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  color: #4A5568;
+}
+
+.imported-content::before {
+  content: 'Imported From Explanation';
+  position: absolute;
+  top: -0.75rem;
+  left: 0.75rem;
+  background-color: #F0F0F0;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  color: #6B7280;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+}
+
+/* Text alignment */
+.ProseMirror .text-left {
+  text-align: left;
+}
+
+.ProseMirror .text-center {
+  text-align: center;
+}
+
+.ProseMirror .text-right {
+  text-align: right;
+}
+
+/* Placeholder */
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #adb5bd;
+  pointer-events: none;
+  height: 0;
+}
+
+/* Success notification animations */
+.notification-enter {
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification-exit {
+  animation: slideOut 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Editor Content Styles */
+.EditorContent {
+  background: white;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Remove any unwanted borders or backgrounds */
+.ProseMirror:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* Ensure editor takes full width */
+.tiptap {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

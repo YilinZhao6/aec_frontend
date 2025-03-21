@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-size: 14px;
+  }
+  @media (min-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  body {
+    @apply bg-[#F0F0F0] text-gray-900 transition-colors duration-300 font-quicksand;
+  }
+
+  input,
+  textarea,
+  button,
+  select,
+  div,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
+  .font-space-mono {
+    font-family: 'Space Mono', monospace !important;
+  }
+
+  .font-sora {
+    font-family: 'Sora', sans-serif !important;
+  }
+
+  .font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif !important;
+  }
+}
+
+/* Logo styling */
+.logo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #3A3A3A;
+}
+
+/* Basic animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Basic slide animations */
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 30s linear infinite;
+}
+
+.animate-slide-right {
+  animation: slide-right 30s linear infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Basic UI Components */
+.cyber-button {
+  @apply relative overflow-hidden bg-[#F0F0F0] text-gray-900 border border-slate-300 hover:border-[#3A3A3A] transition-all duration-300 rounded-md px-4 py-2 font-quicksand text-sm;
+}
+
+.cyber-input {
+  @apply bg-[#F0F0F0] border-2 border-slate-300 focus:border-[#3A3A3A] rounded-lg transition-all duration-300 font-quicksand;
+}
+
+.cyber-card {
+  @apply bg-[#F0F0F0] border border-slate-300 rounded-lg shadow-md overflow-hidden transition-all duration-300;
+}
+
+.cyber-card-header {
+  @apply bg-[#F0F0F0] px-4 py-3 border-b border-slate-300 font-quicksand;
+}
+
+/* Font-specific classes */
+.font-accent {
+  font-family: var(--accent-font);
+}
+
+.font-generated {
+  font-family: var(--generated-font);
+}
+
+.font-heading {
+  font-family: var(--heading-font);
+}
+
+/* Code blocks */
+pre code {
+  @apply font-mono text-sm;
+}
+
+:not(pre) > code {
+  @apply font-mono text-sm bg-[#F0F0F0] px-1.5 py-0.5 rounded border border-slate-300;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
