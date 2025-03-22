@@ -154,7 +154,7 @@ const ConceptExplanations = ({ concepts, editorRef }) => {
         if (!position || !adjustedPosition || !concept) return null;
 
         const isExpanded = expandedComments.has(tag);
-        const verticalOffset = 4;
+        const verticalOffset = 110;
 
         return (
           <div
