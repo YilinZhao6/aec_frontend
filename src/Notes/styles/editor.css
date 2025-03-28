@@ -1,0 +1,293 @@
+/* Base editor styles */
+.ProseMirror {
+  padding: 2rem 3rem;
+  min-height: calc(100vh - 10rem);
+  outline: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: white;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ProseMirror p {
+  margin: 1em 0;
+}
+
+.ProseMirror > *:first-child {
+  margin-top: 0;
+}
+
+/* Headings */
+.ProseMirror h1 {
+  font-size: 2em;
+  margin: 1em 0 0.5em;
+  font-weight: 600;
+}
+
+.ProseMirror h2 {
+  font-size: 1.5em;
+  margin: 1em 0 0.5em;
+  font-weight: 600;
+}
+
+.ProseMirror h3 {
+  font-size: 1.25em;
+  margin: 1em 0 0.5em;
+  font-weight: 600;
+}
+
+/* Lists */
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+.ProseMirror li {
+  margin: 0.5em 0;
+}
+
+.ProseMirror ul li {
+  list-style-type: disc;
+}
+
+.ProseMirror ol li {
+  list-style-type: decimal;
+}
+
+/* Text color and highlight styles */
+.ProseMirror .text-color {
+  transition: color 0.2s;
+}
+
+.ProseMirror mark {
+  border-radius: 0.2em;
+  padding: 0 0.2em;
+  margin: 0 0.1em;
+}
+
+/* Concept mark styling */
+.concept-mark {
+  background: none;
+  border-bottom: 2px solid #3B82F6;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.concept-mark:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Imported content styling */
+.imported-content {
+  display: block;
+  background-color: #F0F0F0;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  color: #4A5568;
+}
+
+.imported-content::before {
+  content: 'Imported From Explanation';
+  position: absolute;
+  top: -0.75rem;
+  left: 0.75rem;
+  background-color: #F0F0F0;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  color: #6B7280;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+}
+
+/* Text alignment */
+.ProseMirror .text-left {
+  text-align: left;
+}
+
+.ProseMirror .text-center {
+  text-align: center;
+}
+
+.ProseMirror .text-right {
+  text-align: right;
+}
+
+/* Placeholder */
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #adb5bd;
+  pointer-events: none;
+  height: 0;
+}
+
+/* Success notification animations */
+.notification-enter {
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification-exit {
+  animation: slideOut 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Editor Content Styles */
+.EditorContent {
+  background: white;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Remove any unwanted borders or backgrounds */
+.ProseMirror:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* Ensure editor takes full width */
+.tiptap {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Color picker dropdown styles */
+.color-picker-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 0.5rem;
+  min-width: 160px;
+}
+
+/* LaTeX formula styles */
+.latex-wrapper {
+  display: inline;
+  vertical-align: middle;
+}
+
+.latex-formula {
+  display: inline-block;
+  margin: 0 0.2em;
+  cursor: default;
+  user-select: all;
+  vertical-align: middle;
+  padding: 0 0.2em;
+}
+
+.latex-formula:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Make LaTeX formulas non-editable but selectable */
+.latex-formula * {
+  pointer-events: none;
+}
+
+/* Image styles */
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.ProseMirror img:hover {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.ProseMirror .resizable-image {
+  display: inline-block;
+  position: relative;
+  margin: 0.5em;
+  resize: both;
+  overflow: hidden;
+}
+
+.ProseMirror .resizable-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ProseMirror .resizable-image:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #3B82F6;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Image alignment */
+.ProseMirror img.align-left {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.ProseMirror img.align-right {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.ProseMirror img.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

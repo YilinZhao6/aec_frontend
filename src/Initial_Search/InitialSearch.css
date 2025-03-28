@@ -1,0 +1,299 @@
+/* CSS Variables for spacing */
+:root {
+  --menu-search-gap: 8px;  /* Space between menu and search bar */
+  --search-suggestions-gap: 24px;  /* Space between search bar and suggestion cards */
+}
+
+/* Add responsive font sizes */
+@layer base {
+  html {
+    font-size: 14px;
+  }
+  @media (min-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  /* Apply Quicksand font globally */
+  body {
+    @apply bg-terminal-white text-gray-900 transition-colors duration-300 font-quicksand;
+  }
+
+  /* Ensure all inputs and text elements use Quicksand by default */
+  input,
+  textarea,
+  button,
+  select,
+  div,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  /* Override for specific font classes */
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
+  .font-space-mono {
+    font-family: 'Space Mono', monospace !important;
+  }
+
+  .font-sora {
+    font-family: 'Sora', sans-serif !important;
+  }
+
+  .font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif !important;
+  }
+}
+
+/* Question Area Styling */
+.question-area {
+  @apply my-8 p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm;
+}
+
+.question-area h4 {
+  @apply text-sm font-medium text-gray-500 mb-4 uppercase tracking-wide;
+}
+
+.question-button {
+  @apply w-full text-left px-6 py-4 bg-white rounded-lg 
+         border border-gray-200
+         hover:border-[#3A3A3A]
+         hover:shadow-md transition-all duration-200
+         text-gray-800 text-base font-quicksand;
+}
+
+.question-button:hover {
+  @apply transform -translate-y-0.5;
+}
+
+.question-button:active {
+  @apply transform translate-y-0;
+}
+
+.question-button:last-child {
+  @apply mb-0;
+}
+
+/* Logo styling */
+.logo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #3A3A3A;
+}
+
+/* Add the sweep animation */
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-sweep {
+  animation: sweep 2s ease-in-out infinite;
+}
+
+/* Text Box Styles */
+.text-box {
+  background: #F0F0F0;
+  border: 1.5px solid #3A3A3A;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #121212;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder text size */
+.text-box input::placeholder,
+.text-box textarea::placeholder {
+  font-size: 14px;
+  color: #6C757D;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Persistent Icon Styling */
+.text-box .icon {
+  color: #3A3A3A;
+  transition: color 0.3s ease-in-out;
+  width: 22px;
+  height: 22px;
+}
+
+/* Hover Effect: Only the Border & Icon Change */
+.text-box:hover, 
+.text-box:focus {
+  border-color: #3A3A3A;
+  box-shadow: 0px 0px 10px rgba(58, 58, 58, 0.4);
+}
+
+/* Icon color changes to match the border on hover */
+.text-box:hover .icon {
+  color: #3A3A3A;
+}
+
+/* Animations */
+@keyframes slide-up {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+@keyframes text-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-text-fade-in {
+  animation: text-fade-in 0.5s ease-out;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 30s linear infinite;
+}
+
+.animate-slide-right {
+  animation: slide-right 30s linear infinite;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Basic UI Components */
+.cyber-button {
+  @apply relative overflow-hidden bg-cyber-gray text-terminal-white border border-slate-300 hover:border-[#3A3A3A] transition-all duration-300 rounded-md px-4 py-2 font-quicksand text-sm;
+}
+
+.cyber-input {
+  @apply bg-off-white border-2 border-slate-300 focus:border-[#3A3A3A] rounded-lg transition-all duration-300 font-quicksand;
+}
+
+.cyber-card {
+  @apply bg-off-white border border-slate-300 rounded-lg shadow-md overflow-hidden transition-all duration-300;
+}
+
+.cyber-card-header {
+  @apply bg-off-white px-4 py-3 border-b border-slate-300 font-quicksand;
+}
+
+/* Custom range slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3A3A3A;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3A3A3A;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Font-specific classes */
+.font-accent {
+  font-family: var(--accent-font);
+}
+
+.font-generated {
+  font-family: var(--generated-font);
+}
+
+.font-heading {
+  font-family: var(--heading-font);
+}
+
+/* Code blocks */
+pre code {
+  @apply font-mono text-sm;
+}
+
+:not(pre) > code {
+  @apply font-mono text-sm bg-off-white px-1.5 py-0.5 rounded border border-slate-300;
+}
+
+/* Initial Search specific styles */
+.search-container {
+  margin-bottom: var(--menu-search-gap);
+}
+
+.suggestions-container {
+  margin-top: var(--search-suggestions-gap);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
