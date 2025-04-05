@@ -1,0 +1,217 @@
+/* Base styles */
+.markdown-content {
+  color: #000000;
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17.25 px; /* Increased by 15% from 15px */
+  line-height: 1.4;
+  letter-spacing: 0.15px;
+}
+
+/* Headings */
+.markdown-content h1 {
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 32px; /* Increased by 15% from 32px */
+  font-weight: 600;
+  margin-bottom: 18.4px; /* Increased by 15% from 16px */
+  margin-top: 27.6px; /* Increased by 15% from 24px */
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 9.2px; /* Increased by 15% from 8px */
+  line-height: 1.2;
+  color: #000000;
+}
+
+.markdown-content h2 {
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px; /* Increased by 15% from 24px */
+  font-weight: 600;
+  margin-bottom: 16.1px; /* Increased by 15% from 14px */
+  margin-top: 23px; /* Increased by 15% from 20px */
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 6.9px; /* Increased by 15% from 6px */
+  line-height: 1.2;
+  color: #000000;
+}
+
+.markdown-content h3 {
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px; /* Increased by 15% from 18px */
+  font-weight: 600;
+  margin-bottom: 13.8px; /* Increased by 15% from 12px */
+  margin-top: 20.7px; /* Increased by 15% from 18px */
+  line-height: 1.2;
+  color: #000000;
+}
+
+/* Text elements */
+.markdown-content p {
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px; /* Increased by 15% from 15px */
+  margin-bottom: 13.8px; /* Increased by 15% from 12px */
+  margin-top: 0;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17.25px; /* Increased by 15% from 15px */
+  margin-bottom: 13.8px; /* Increased by 15% from 12px */
+  margin-top: 0;
+  padding-left: 2.3em; /* Increased by 15% from 2em */
+  line-height: 1.4;
+  color: #000000;
+}
+
+.markdown-content li {
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17.25px; /* Increased by 15% from 15px */
+  margin-bottom: 4.6px; /* Increased by 15% from 4px */
+  line-height: 1.4;
+  color: #000000;
+}
+
+/* Images and figures */
+.markdown-content img {
+  max-width: 115%; /* Increased by 15% from 100% */
+  height: auto;
+  margin: 0 auto;
+}
+
+.markdown-content figure {
+  width: 115%; /* Increased by 15% from 100% */
+  margin: 1.15rem 0; /* Increased by 15% from 1rem */
+  padding: 11.5px; /* Increased by 15% from 10px */
+  border: 11.5px solid #A0A0A0; /* Increased by 15% from 10px */
+  background-color: #F2F2F2;
+}
+
+.markdown-content figcaption {
+  text-align: center;
+  font-family: var(--accent-font);
+  font-size: 17.25px; /* Increased by 15% from 15px */
+}
+
+/* Blockquotes */
+.markdown-content blockquote {
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17.25px; /* Increased by 15% from 15px */
+  border-left: 4.6px solid #dfe2e5; /* Increased by 15% from 4px */
+  color: #6a737d;
+  margin-bottom: 13.8px; /* Increased by 15% from 12px */
+  margin-top: 0;
+  padding-left: 18.4px; /* Increased by 15% from 16px */
+  line-height: 1.4;
+}
+
+/* Code blocks */
+.markdown-content code {
+  font-family: "JetBrains Mono", Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
+  font-size: 14.95px; /* Increased by 15% from 13px */
+  padding: 0.23em 0.46em; /* Increased by 15% from 0.2em 0.4em */
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3.45px; /* Increased by 15% from 3px */
+}
+
+.markdown-content pre {
+  padding: 18.4px; /* Increased by 15% from 16px */
+  overflow: auto;
+  font-size: 14.95px; /* Increased by 15% from 13px */
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3.45px; /* Increased by 15% from 3px */
+  margin-bottom: 13.8px; /* Increased by 15% from 12px */
+  margin-top: 0;
+}
+
+.markdown-content pre code {
+  padding: 0;
+  font-size: inherit;
+  background-color: transparent;
+}
+
+/* KaTeX styles */
+.katex-display > .katex {
+  font-size: 0.9775em !important; /* Increased by 15% from 0.85em */
+}
+
+.katex {
+  font-size: 1.265em !important; /* Increased by 15% from 1.1em */
+}
+
+li .katex {
+  font-size: 1.265em !important; /* Increased by 15% from 1.1em */
+}
+
+/* Keep existing KaTeX font settings */
+.katex .math {
+  font-family: 'STIX Two Math', KaTeX_Math !important;
+  font-style: italic !important;
+  font-feature-settings: "ss01" 1;
+}
+
+.katex .mathit,
+.katex .mathnormal,
+.katex .mathdefault {
+  font-family: KaTeX_Math, 'STIX Two Math' !important;
+  font-style: italic !important;
+  font-feature-settings: "ss01" 1;
+}
+
+.katex .mord {
+  font-family: KaTeX_Main, 'STIX Two Math' !important;
+  font-feature-settings: "ss01" 1;
+}
+
+/* Ensure numbers are not italicized */
+.katex .mord.mtight,
+.katex .mord.text,
+.katex .mord.text > .text,
+.katex .mord.text > span[class*="mathtt"],
+.katex .mord.text > span[class*="mathsf"],
+.katex .mord.text > span[class*="mathrm"],
+.katex .mord.text.mtight,
+.katex .mord.text > span[class*="mathord"] {
+  font-style: normal !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 9.2px; /* Increased by 15% from 8px */
+  height: 9.2px; /* Increased by 15% from 8px */
+}
+
+::-webkit-scrollbar-track {
+  background: #F0F0F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A0A0A0;
+  border-radius: 4.6px; /* Increased by 15% from 4px */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6C757D;
+}
+
+/* Bottom bar */
+.markdown-bottom-bar {
+  font-family: "Quicksand", sans-serif;
+  font-size: 13.524px; /* Increased by 15% from 11.76px */
+}
+
+/* Ensure mermaid diagrams stay rendered */
+.mermaid svg {
+  display: block !important;
+  max-width: 115%; /* Increased by 15% from 100% */
+  height: auto;
+}
+
+/* Hide mermaid code when diagram is rendered */
+.mermaid:has(svg) {
+  background-color: transparent !important;
+}
+
+.mermaid:has(svg) .language-mermaid {
+  display: none !important;
+}
