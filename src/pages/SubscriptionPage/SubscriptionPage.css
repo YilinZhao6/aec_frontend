@@ -1,0 +1,138 @@
+/* Subscription Container */
+.subscription-container {
+  @apply max-w-7xl mx-auto py-10 px-16;
+}
+
+.subscription-header {
+  @apply mb-8;
+}
+
+.page-title {
+  @apply font-quicksand font-bold text-3xl text-gray-800 mb-2;
+}
+
+.pricing-note {
+  @apply text-sm text-gray-500 font-quicksand;
+}
+
+.subscription-content {
+  @apply relative overflow-hidden;
+}
+
+/* Plans Container */
+.plans-container {
+  @apply grid grid-cols-3 gap-8 mb-8 relative z-10;
+}
+
+/* Plan Card */
+.plan-card {
+  @apply bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-gray-200 relative transition-all duration-300 hover:shadow-md;
+}
+
+.plan-card.current {
+  @apply border-2 border-gray-800 shadow-md;
+}
+
+.plan-card.coming-soon {
+  @apply opacity-75;
+}
+
+/* Current Badge */
+.current-badge {
+  @apply absolute -top-3 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-3 py-0.5 rounded-full text-xs font-quicksand font-medium relative z-10;
+}
+
+/* Plan Header */
+.plan-header {
+  @apply mb-6;
+}
+
+.plan-name {
+  @apply font-quicksand font-bold text-lg text-gray-800 mb-3 flex items-center gap-2;
+}
+
+.plan-icon {
+  @apply text-yellow-500;
+}
+
+.plan-price {
+  @apply mb-2;
+}
+
+.amount {
+  @apply text-3xl font-quicksand font-bold text-gray-800;
+}
+
+.period {
+  @apply text-gray-500 font-quicksand text-sm;
+}
+
+.plan-description {
+  @apply text-xs text-gray-600 font-quicksand;
+}
+
+/* Plan Limits */
+.plan-limits {
+  @apply grid grid-cols-2 gap-3 mb-6 p-3 bg-gray-50 backdrop-blur-sm rounded-lg relative z-10;
+}
+
+.limit-item {
+  @apply flex flex-col items-center;
+}
+
+.limit-value {
+  @apply text-xl font-quicksand font-bold text-gray-800;
+}
+
+.limit-label {
+  @apply text-xs text-gray-600 font-quicksand;
+}
+
+/* Features List */
+.plan-features {
+  @apply space-y-2 mb-6;
+}
+
+.feature-item {
+  @apply flex items-center gap-2 text-xs text-gray-600 font-quicksand;
+}
+
+.feature-check {
+  @apply text-green-500 flex-shrink-0;
+}
+
+/* Subscribe Button */
+.subscribe-button {
+  @apply w-full py-2 rounded-lg font-quicksand font-medium transition-colors text-sm relative z-10;
+  @apply bg-gray-100 text-gray-800 hover:bg-gray-200;
+}
+
+.subscribe-button.current {
+  @apply bg-gray-800 text-white cursor-not-allowed hover:bg-gray-800;
+}
+
+.subscribe-button.coming-soon {
+  @apply bg-gray-100 text-gray-500 cursor-not-allowed hover:bg-gray-100;
+}
+
+/* Footer */
+.subscription-footer {
+  @apply text-center space-y-1 relative z-10;
+}
+
+.guarantee {
+  @apply font-quicksand font-medium text-sm text-gray-800;
+}
+
+.support {
+  @apply text-xs text-gray-500 font-quicksand;
+}
+
+/* Stripe Checkout Container */
+.stripe-checkout-container {
+  @apply h-[calc(100vh-6.5rem)] overflow-hidden;
+}
+
+.stripe-checkout-container iframe {
+  @apply w-full h-full border-0;
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Base styles */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent page scroll */
+}
+
+/* Make sure all parent containers take full height */
+.h-screen {
+  height: 100vh;
+  overflow: hidden; /* Prevent container scroll */
+}
+
+/* Ensure the content fills the container */
+.flex-1 {
+  flex: 1 1 auto;
+  overflow: hidden; /* Prevent flex container scroll */
+}
+
+/* Ensure proper scrolling for the content area */
+.overflow-auto {
+  overflow: auto;
+}
+
+/* Ensure the content panel takes full height */
+.bg-gray-100.rounded-lg.shadow-lg {
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent panel scroll */
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 9.2px;
+  height: 9.2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0F0F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A0A0A0;
+  border-radius: 4.6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6C757D;
+}
+
+/* Bottom bar */
+.markdown-bottom-bar {
+  font-family: "Quicksand", sans-serif;
+  font-size: 13.524px;
+}
+
+/* Resizing styles */
+body.resizing {
+  cursor: col-resize;
+  user-select: none;
+}
+
+body.resizing * {
+  cursor: col-resize !important;
+}
+
+/* Disable transitions during resize */
+.transition-none {
+  transition: none !important;
+}
+
+/* Import component styles */
+@import './styles/content.css';
+@import './styles/imported-content.css';
+@import './styles/right-panel.css';
+
+/* Main container styles */
+.markdown-viewer-container {
+  @apply h-screen flex flex-col overflow-hidden bg-gray-100;
+}
+
+/* Content area styles */
+.markdown-viewer-content {
+  @apply flex flex-1 overflow-hidden;
+}
+
+/* Main content area */
+.main-content-area {
+  @apply p-4 transition-none overflow-hidden;
+}
+
+/* Content scroll container */
+.content-scroll-container {
+  @apply h-full overflow-y-auto;
+}
+
+/* Right panel container */
+.right-panel-container {
+  @apply p-4 transition-none flex-none overflow-hidden;
+}
+
+/* Right panel scroll area */
+.right-panel-scroll {
+  @apply h-full overflow-y-auto;
+}
+
+/* Resizer styles */
+.resizer {
+  @apply w-1 cursor-col-resize relative flex-none;
+}
+
+.resizer::before {
+  content: '';
+  @apply absolute inset-y-0 -left-1 -right-1 bg-transparent group-hover:bg-gray-300 transition-colors;
+}
+
+.resizer.dragging::before {
+  @apply bg-gray-300;
+}
