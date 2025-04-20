@@ -1,0 +1,261 @@
+/* Content Container */
+.content-container {
+  @apply max-w-5xl mx-auto mt-[4%] px-8;
+}
+
+.greeting {
+  @apply font-quicksand font-bold text-3xl text-gray-800 mb-[4%];
+}
+
+.content-layout {
+  @apply space-y-[4%];
+}
+
+/* Search card styles */
+.search-card {
+  @apply bg-gray-50 rounded-2xl p-6 shadow-sm mt-[2%] relative overflow-hidden min-w-[300px];
+  animation: cardGradient 8s ease infinite;
+  background: linear-gradient(
+    45deg,
+    rgb(243 244 246) 0%,
+    rgb(229 231 235) 25%,
+    rgb(243 244 246) 50%,
+    rgb(229 231 235) 75%,
+    rgb(243 244 246) 100%
+  );
+  background-size: 400% 400%;
+}
+
+@keyframes cardGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Search content layout */
+.search-content {
+  @apply flex gap-6 relative z-10 min-w-[280px];
+}
+
+/* Main search area transitions */
+.search-main {
+  @apply w-full transition-all duration-150 ease-in-out;
+}
+
+.search-content.with-books .search-main {
+  @apply w-[65%] min-w-[280px];
+}
+
+.search-header {
+  @apply flex items-center justify-end mb-6;
+}
+
+.mode-switch {
+  @apply flex items-center gap-2 bg-white rounded-full p-1 border border-gray-200;
+}
+
+.mode-option {
+  @apply px-4 py-1.5 rounded-full text-sm font-quicksand font-medium transition-colors;
+}
+
+.mode-option.active {
+  @apply bg-gray-800 text-white;
+}
+
+.mode-option.inactive {
+  @apply text-gray-600 hover:text-gray-900;
+}
+
+.search-input-container {
+  @apply relative;
+}
+
+.search-input {
+  @apply w-full text-gray-800 text-2xl p-6 pr-16 rounded-xl border-none outline-none shadow-sm placeholder-gray-400 font-quicksand font-normal bg-white/90 backdrop-blur-sm;
+  min-width: 280px;
+}
+
+.search-button {
+  @apply absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-colors;
+}
+
+.action-bar {
+  @apply flex items-center gap-4 mt-6 p-4 bg-white/90 backdrop-blur-sm rounded-full shadow-sm;
+  min-width: 280px;
+}
+
+.icon-button {
+  @apply p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-colors;
+}
+
+.icon-button.active {
+  @apply bg-gray-800 text-white hover:bg-gray-700;
+}
+
+.comment-input {
+  @apply flex-1 bg-transparent text-gray-600 placeholder-gray-400 outline-none font-quicksand font-normal px-2;
+  min-width: 150px;
+}
+
+/* Books Panel */
+.books-panel {
+  @apply w-[35%] space-y-4;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 200px;
+}
+
+.books-panel.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.book-search {
+  @apply flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 border border-gray-200;
+}
+
+.book-search input {
+  @apply bg-transparent w-full outline-none text-sm font-quicksand;
+}
+
+/* Books list styles */
+.books-list {
+  @apply space-y-2;
+  height: 20vh;
+  max-height: 20vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  background-color: rgba(249, 250, 251, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 200px;
+}
+
+/* Webkit scrollbar styles */
+.books-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.books-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.books-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.books-loading,
+.books-error,
+.books-empty {
+  @apply flex items-center justify-center gap-2 text-sm text-gray-500 font-quicksand h-full;
+}
+
+.book-item {
+  @apply flex items-center justify-between p-3 rounded-lg cursor-pointer hover:bg-gray-50 border border-gray-100 relative bg-white/90 backdrop-blur-sm;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-item.selected {
+  @apply bg-gray-50 border-gray-200;
+}
+
+/* Selection number styles */
+.book-item.selected::after {
+  content: attr(data-selection-number);
+  @apply absolute -top-2 -right-2 w-5 h-5 bg-gray-800 text-white rounded-full flex items-center justify-center text-xs font-medium;
+  animation: numberAppear 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes numberAppear {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.book-info {
+  @apply flex items-center gap-2;
+}
+
+.book-details {
+  @apply flex flex-col;
+}
+
+.book-title {
+  @apply text-sm font-medium text-gray-800 font-quicksand;
+}
+
+.book-author {
+  @apply text-xs text-gray-500 font-quicksand;
+}
+
+/* History sections */
+.history-sections {
+  @apply grid grid-cols-2 gap-6 min-w-[600px] px-4;
+}
+
+.history-section {
+  @apply bg-gray-50 rounded-2xl overflow-hidden shadow-sm min-w-[280px];
+}
+
+.history-header {
+  @apply bg-gray-100 px-6 py-4 flex items-center justify-between;
+}
+
+.history-title {
+  @apply text-gray-800 font-quicksand font-bold text-lg;
+}
+
+.history-list {
+  @apply p-6 space-y-4;
+}
+
+.history-item {
+  @apply bg-white rounded-xl border border-gray-100 transition-colors hover:bg-gray-50;
+  height: 84px; /* Fixed height for consistency */
+}
+
+.history-content {
+  @apply h-full p-4 flex flex-col justify-between;
+}
+
+.history-item-title {
+  @apply text-gray-800 font-quicksand font-medium text-sm truncate;
+}
+
+.history-meta {
+  @apply text-xs;
+}
+
+/* Login Prompt */
+.login-prompt-container {
+  @apply flex justify-center items-center py-12;
+}
+
+.login-prompt {
+  @apply flex flex-col items-center text-center max-w-lg mx-auto space-y-4 bg-white/90 backdrop-blur-sm rounded-xl p-8 border border-gray-200 shadow-sm;
+}
+
+.login-prompt-title {
+  @apply text-xl font-semibold text-gray-800 font-quicksand;
+}
+
+.login-prompt-text {
+  @apply text-gray-600 text-sm font-quicksand;
+}

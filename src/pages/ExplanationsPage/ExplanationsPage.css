@@ -1,0 +1,67 @@
+/* Explanations Page Container */
+.explanations-container {
+  @apply max-w-7xl mx-auto py-10 px-16;
+}
+
+.explanations-header {
+  @apply flex items-center justify-between mb-8;
+}
+
+.page-title {
+  @apply font-quicksand font-bold text-3xl text-gray-800;
+}
+
+.explanations-content {
+  @apply relative overflow-hidden;
+}
+
+/* Loading and Error States */
+.loading-state,
+.error-state {
+  @apply flex flex-col items-center justify-center gap-4 text-gray-600 font-quicksand min-h-[400px] relative z-10;
+}
+
+/* List Header */
+.explanations-list-header {
+  @apply grid grid-cols-[2.5fr,1.3fr,1fr,1fr,1fr] gap-4 px-4 py-2 bg-gray-100/90 backdrop-blur-sm rounded-t-lg font-quicksand font-semibold text-sm text-gray-600 relative z-10;
+}
+
+/* List Container */
+.explanations-list {
+  @apply border border-gray-200 rounded-b-lg bg-white/90 backdrop-blur-sm relative z-10;
+}
+
+/* Explanation Row Styles */
+.explanation-row {
+  @apply grid grid-cols-[2.5fr,1.3fr,1fr,1fr,1fr] gap-4 px-4 py-3 hover:bg-gray-50/90 transition-colors items-center border-t border-gray-100 first:border-t-0;
+}
+
+/* Cell Styles */
+.name-cell {
+  @apply flex items-center gap-2 text-gray-800;
+}
+
+.created-cell {
+  @apply flex items-center gap-2 text-sm text-gray-600;
+}
+
+.meta-cell {
+  @apply flex items-center gap-2 text-sm text-gray-600;
+}
+
+.actions-cell {
+  @apply flex items-center justify-end gap-2;
+}
+
+/* Explanation Elements */
+.explanation-title {
+  @apply font-quicksand font-medium text-gray-800;
+}
+
+.explanation-action-button {
+  @apply p-1.5 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors;
+}
+
+.open-button {
+  @apply px-3 py-1 bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-700 transition-colors font-quicksand font-medium;
+}
